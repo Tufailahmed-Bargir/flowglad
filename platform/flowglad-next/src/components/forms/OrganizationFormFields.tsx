@@ -151,7 +151,7 @@ const OrganizationFormFields = ({
         control={form.control}
         name="organization.name"
         render={({ field }) => (
-          <FormItem>
+          <FormItem id="organization-name-item">
             <FormLabel>Organization Name</FormLabel>
             <FormControl>
               <Input placeholder="Your Company" {...field} />
@@ -164,7 +164,7 @@ const OrganizationFormFields = ({
         control={form.control}
         name="organization.countryId"
         render={({ field }) => (
-          <FormItem>
+          <FormItem id="organization-country-item">
             <FormLabel>Country</FormLabel>
             <FormControl>
               <Select
@@ -196,7 +196,7 @@ const OrganizationFormFields = ({
           control={form.control}
           name="organization.stripeConnectContractType"
           render={({ field }) => (
-            <FormItem>
+            <FormItem id="organization-payment-processing-item">
               <FormLabel>Payment Processing</FormLabel>
               <FormControl>
                 <RadioGroup
@@ -322,7 +322,7 @@ const OrganizationFormFields = ({
         control={form.control}
         name="codebaseMarkdown"
         render={({ field }) => (
-          <FormItem>
+          <FormItem id="organization-codebase-overview-item">
             <FormLabel>Codebase Overview</FormLabel>
             <div className="text-sm text-muted-foreground !mt-0 pb-1 max-w-[300px]">
               Provide an analysis of your codebase to generate a
@@ -366,7 +366,7 @@ const OrganizationFormFields = ({
         )}
       />
       {setReferralSource && (
-        <FormItem>
+        <FormItem id="organization-referral-source-item">
           <FormLabel>How did you hear about us?</FormLabel>
           <FormControl>
             <Select
